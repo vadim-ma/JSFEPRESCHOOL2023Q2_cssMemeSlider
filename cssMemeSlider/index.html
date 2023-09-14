@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meme slider</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/vars.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <div class="slider">
+        <div class="slider--frame">
+            <ol class="">
+                <li><img src="images/shot.jpg" alt="shot" data-meme="I got a new task. It's so simple."></li>
+                <li><img src="images/trouble.jpg" alt="trouble" data-meme="I am working on the ...... cssMemSlider ....."></li>
+                <li><img src="images/screaming.jpg" alt="screaming" data-meme="I'll do it. Damn it."></li>
+                <li><img src="images/finally.jpg" alt="finally" data-meme="I've done it! Let's get drunk!"></li>
+                <li><img src="images/reward.jpg" alt="reward" data-meme="Thank you to everyone who believed in me. I did not."></li>
+            </ol>
+        </div>
+        <div class="slider--controls">
+            <div class="slider--controls-wrapper">
+                <ul>
+                    <li><button id="btnleft"><</button></li>
+                    <li><button id="btnRight">></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
     
 </body>
 </html>

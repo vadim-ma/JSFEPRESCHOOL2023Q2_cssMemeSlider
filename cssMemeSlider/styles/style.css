@@ -1,50 +1,90 @@
 body{
-    font-size: 16px;
+    font-size: 12px;
 }
 .slider{
-    max-width: 1920px;
-    min-width: 300px;
     margin: 0 auto;
-    padding: 1em calc(1em * var(--aspect-ratio));
+    /* padding: 5% calc(5% * var(--aspect-ratio)); */
+    /* padding: 5%; */
+    padding: 0;
     border: 4px solid green;
+
+    background-color: #26282A;
+    color: white;
 }
-.slider--frame{
-    width: 100%;
+.slider_container{
+    margin: 0 auto;
+    padding: 3%;
+    max-width: 1920px;
+    /* min-width: 300px; */
     aspect-ratio: var(--aspect-ratio);
+}
+.slider__frame{
+    /* aspect-ratio: var(--aspect-ratio); */
+    height: 100%;
+
     overflow: hidden;    
     outline: 5px solid red;
     margin: 0 auto;
 }
-.slider--controls{
+.slider__footer{
+    padding-top: 4em;
+}
+.slider__controls{
+    flex-shrink: 0;
+    /* margin: 0 auto; */
+
 }
 
-ol,
-ul
-{
+.slider__image-list{
+
     display: flex;
+    justify-content: flex-start;    
     padding: 0;
     margin: 0;
     list-style: none;
 }
-ol{
-    margin-left: -200%;
+.slider__image-list{
+    margin-left: -300%;
     height: 100%;
     transition: all 3s;
 }
-ol.left{
-    margin-left: -300%;
+.slider__image-list.left{
+    margin-left: -400%;
 }
-ol.right{
-    margin-left: -100%;
+.slider--image-list.right{
+    margin-left: -200%;
 }
-.slider--controls-wrapper{
-    margin: 0 auto;
+.slider__footer{
+    display: flex;
+    gap: 1em;
+    align-items: self-start;
+    font-size: 1em;
+    padding: 1em 0 0 0;
 }
-ol li{
+.slider__meme-text{
+    margin: 0;
+    /* font-size: 1em; */
+    flex-grow: 1;
+}
+.slider__controls{
+    flex-grow: 0;
+    height: 100%;
+    margin-top: -0.4em;
+}
+
+.slider__btn-list
+{
+    display: flex;
+    justify-content: flex-start;   
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
 }
+
 img {
-    aspect-ratio: 16/9;
+    /* aspect-ratio: 16/9; */
     height: 100%;
     object-fit:scale-down;
     /* object-fit: cover; */
@@ -52,6 +92,38 @@ img {
 }
 
 button{
-    margin-top: 20px;
-    font-size: 4em;
+    /* margin-top: 10%; */
 }
+.button{
+    width: 2em;
+    /* outline: 2px solid orange; */
+    aspect-ratio: 1;
+    padding: 0.4em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    /* margin-top: -5%; */
+
+}
+.circle{
+    aspect-ratio: 1;
+    /* box-sizing: border-box; */
+    /* line-height: 0; */
+    /* width: 2em; */
+   background-color: steelblue;
+   border-radius: 50%;
+   /* border: 1vw solid lightpink; */
+}
+.button:hover .circle{
+    background-color: white;
+
+}
+.button.active .circle{
+   background-color: transparent;
+   border: medium solid steelblue;
+}
+.button.active:hover .circle{
+    border-color: white;
+
+}
+

@@ -1,3 +1,3 @@
-document.querySelector('#btnLeft').onclick = () => {
-    document.querySelector('ol').classList.add('left');
-};
+// document.querySelector('#btnLeft').onclick = () => {
+//     document.querySelector('ol').classList.add('left');
+// };

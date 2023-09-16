@@ -1,0 +1,12 @@
+@media screen and (max-width: 320px) {
+    .slider__footer{
+        flex-direction: column-reverse;
+    }
+    .slider__controls{
+        align-self: center;
+        margin-top: 0;
+    }
+    .button{
+        margin-top: 0;
+    }
+}

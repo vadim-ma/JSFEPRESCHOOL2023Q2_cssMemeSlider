@@ -1,3 +1,50 @@
+@keyframes changeMemeText {
+    0% {    
+        /* content: var(--old-meme-text); */
+        /* content: '0000000'; */
+        /* opacity: 1; */
+    }
+    /* 50% { */
+        /* opacity: 0; */
+        /* content: var(--old-meme-text); */
+    /* } */
+    /* 51% { */
+        /* opacity: 0; */
+        /* content: var(--new-meme-text); */
+    /* } */
+    
+    100% {
+        /* opacity: 1; */
+        /* content: var(--new-meme-text); */
+        content: 'AAAA';
+    }
+}
+@keyframes fadein {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeout {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slider__meme-text.fadein {
+    animation-name: fadein;
+    animation-duration: 1s;
+}
+.slider__meme-text.fadeout {
+    animation-name: fadeout;
+    animation-duration: 1s;
+}
+
 body {
     font-size: 12px;
 }
@@ -73,6 +120,9 @@ body {
     flex-grow: 1;
     /* font-size: 2em; */
     font-size: large;
+    /* animation-name: changeMemeText; */
+    /* animation-duration: 1s; */
+    /* animation-iteration-count: infinite; */
 }
 
 .slider__controls {

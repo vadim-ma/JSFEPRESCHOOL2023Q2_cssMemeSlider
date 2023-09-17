@@ -26,8 +26,14 @@ function changeSlide(btn) {
     // slides.style.marginLeft = slides.children[0].offsetLefxt - slides.children[newIndex].offsetLeft + 'px';
     slides.style.marginLeft = `${newIndex * -100}%`;
 
-    memText.textContent = slides.children[newIndex].firstChild.dataset.memeText;
+    // memText.style.animationName = '';
+    // memText.textContent = slides.children[newIndex].firstChild.dataset.memeText;
 
+    // document.documentElement.style.setProperty('--old-meme-text', slides.children[oldInderx].firstChild.dataset.memeText);
+    // document.documentElement.style.setProperty('--new-meme-text', slides.children[newIndex].firstChild.dataset.memeText);
+    // memText.textContent = slides.children[newIndex].firstChild.dataset.memeText;
+    // memText.style.animationName = 'changeMemeText';
+    memText.classList.add('fadein');
 }
 function btnClick_handler(event) {
     const target = event.target.closest('button');
@@ -36,6 +42,31 @@ function btnClick_handler(event) {
     }
     changeSlide(target);
 }
-buttons.addEventListener('click', btnClick_handler);
 
-changeSlide(buttons.children[0].children[0]);
+function changeMemeText(){
+    const activeBtn = buttons.querySelector('.button.active');
+    const newIndex = getBtnIndex(activeBtn);
+    memText.textContent = slides.children[newIndex].firstChild.dataset.memeText;
+}
+function animationend_Handler(event){
+    switch (event.animationName) {
+        case 'fadein':
+            memText.classList.remove('fadein');
+            changeMemeText();
+            memText.classList.add('fadeout');
+            
+            break;
+        case 'fadeout':
+            memText.classList.remove('fadeout')
+        
+        break;
+    
+        default:
+            break;
+    }
+}
+buttons.addEventListener('click', btnClick_handler);
+memText.addEventListener("animationend", animationend_Handler);
+
+// changeSlide(buttons.children[0].children[0]);
+changeMemeText();

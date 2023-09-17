@@ -1,7 +1,3 @@
-// document.querySelector('#btnLeft').onclick = () => {
-//     document.querySelector('ol').classList.add('left');
-// };
-
 const buttons = document.querySelector('.slider__btn-list');
 const memText = document.querySelector('.slider__meme-text');
 const slides = document.querySelector('.slider__image-list');
@@ -23,17 +19,9 @@ function changeSlide(btn) {
     const oldInderx = getBtnIndex(activeBtn);
     const newIndex = getBtnIndex(btn);
 
-    // slides.style.marginLeft = slides.children[0].offsetLefxt - slides.children[newIndex].offsetLeft + 'px';
     slides.style.marginLeft = `${newIndex * -100}%`;
 
-    // memText.style.animationName = '';
-    // memText.textContent = slides.children[newIndex].firstChild.dataset.memeText;
-
-    // document.documentElement.style.setProperty('--old-meme-text', slides.children[oldInderx].firstChild.dataset.memeText);
-    // document.documentElement.style.setProperty('--new-meme-text', slides.children[newIndex].firstChild.dataset.memeText);
-    // memText.textContent = slides.children[newIndex].firstChild.dataset.memeText;
-    // memText.style.animationName = 'changeMemeText';
-    memText.classList.add('fadein');
+    memText.classList.add('fadein'); //start text change animation
 }
 function btnClick_handler(event) {
     const target = event.target.closest('button');
@@ -68,5 +56,4 @@ function animationend_Handler(event){
 buttons.addEventListener('click', btnClick_handler);
 memText.addEventListener("animationend", animationend_Handler);
 
-// changeSlide(buttons.children[0].children[0]);
 changeMemeText();

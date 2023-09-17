@@ -1,83 +1,27 @@
-@keyframes changeMemeText {
-    0% {    
-        /* content: var(--old-meme-text); */
-        /* content: '0000000'; */
-        /* opacity: 1; */
-    }
-    /* 50% { */
-        /* opacity: 0; */
-        /* content: var(--old-meme-text); */
-    /* } */
-    /* 51% { */
-        /* opacity: 0; */
-        /* content: var(--new-meme-text); */
-    /* } */
-    
-    100% {
-        /* opacity: 1; */
-        /* content: var(--new-meme-text); */
-        content: 'AAAA';
-    }
-}
-@keyframes fadein {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-@keyframes fadeout {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.slider__meme-text.fadein {
-    animation-name: fadein;
-    animation-duration: 1s;
-}
-.slider__meme-text.fadeout {
-    animation-name: fadeout;
-    animation-duration: 1s;
-}
-
 body {
     font-size: 12px;
 }
 
 .slider {
-    margin: 0 auto;
-    /* padding: 5% calc(5% * var(--aspect-ratio)); */
-    /* padding: 5%; */
     padding: 0;
-    /* border: 4px solid green; */
+    margin: 0 auto;
 
     background-color: #26282A;
     color: white;
-    /* max-height: 100%; */
     max-width: 140vh;
-    /* aspect-ratio: 1; */
 
 }
 
 .slider_container {
     margin: 0 auto;
     padding: 2%;
-    /* max-width: 1920px; */
-    /* min-width: 300px; */
     aspect-ratio: var(--aspect-ratio);
 }
 
 .slider__frame {
-    /* aspect-ratio: var(--aspect-ratio); */
     height: 100%;
 
     overflow: hidden;
-    /* outline: 5px solid red; */
     margin: 0 auto;
 }
 
@@ -87,7 +31,6 @@ body {
 
 .slider__controls {
     flex-shrink: 0;
-    /* margin: 0 auto; */
 
 }
 
@@ -101,7 +44,6 @@ body {
 }
 
 .slider__image-list {
-    /* margin-left: -300%; */
     height: 100%;
     transition: all 1s;
 }
@@ -116,13 +58,9 @@ body {
 
 .slider__meme-text {
     margin: 0;
-    /* font-size: 1em; */
     flex-grow: 1;
-    /* font-size: 2em; */
     font-size: large;
-    /* animation-name: changeMemeText; */
-    /* animation-duration: 1s; */
-    /* animation-iteration-count: infinite; */
+    animation-duration: 1s;
 }
 
 .slider__controls {
@@ -142,33 +80,25 @@ body {
 }
 
 img {
-    /* aspect-ratio: 16/9; */
     height: 100%;
     object-fit: scale-down;
-    /* object-fit: cover; */
 
 }
 
 .button {
     width: 3em;
-    /* outline: 2px solid orange; */
     aspect-ratio: 1;
     padding: 0.7em;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    /* margin-top: -5%; */
 
 }
 
 .circle {
     aspect-ratio: 1;
-    /* box-sizing: border-box; */
-    /* line-height: 0; */
-    /* width: 2em; */
     background-color: steelblue;
     border-radius: 50%;
-    /* border: 1vw solid lightpink; */
 }
 
 .button:hover .circle {
@@ -186,3 +116,27 @@ img {
 
 }
 
+
+@keyframes fadein {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeout {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slider__meme-text.fadein {
+    animation-name: fadein;
+}
+.slider__meme-text.fadeout {
+    animation-name: fadeout;
+}

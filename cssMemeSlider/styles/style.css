@@ -76,8 +76,7 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
-    line-height: 1;
-
+    line-height: 0;
 }
 
 img {
@@ -93,6 +92,7 @@ img {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    line-height: inherit;
 
 }
 
@@ -110,6 +110,7 @@ img {
 }
 
 .button.active .circle {
+    box-sizing: border-box;
     background-color: transparent;
     border: medium solid steelblue;
 }

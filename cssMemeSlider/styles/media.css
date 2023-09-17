@@ -1,4 +1,9 @@
 @media screen and (max-width: 640px) {
+    .slider {
+        max-width: 120vh;
+    
+    }
+    
     .slider__footer{
         flex-direction: column-reverse;
     }

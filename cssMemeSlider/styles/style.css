@@ -76,6 +76,7 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
+    line-height: 1;
 
 }
 
@@ -96,6 +97,8 @@ img {
 }
 
 .circle {
+    display: inline-block;
+    height: 90%;
     aspect-ratio: 1;
     background-color: steelblue;
     border-radius: 50%;

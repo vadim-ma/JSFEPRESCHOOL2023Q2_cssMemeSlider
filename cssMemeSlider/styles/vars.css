@@ -1,3 +1,6 @@
 :root {
     --aspect-ratio: calc(16/9);
+
+    --old-meme-text: '';
+    --new-meme-text: '';
 }

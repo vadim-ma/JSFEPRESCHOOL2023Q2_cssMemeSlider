@@ -155,8 +155,8 @@ input#btn5:checked ~ .slider__footer label[for="btn5"].circle:hover
 }
 
 .slider__image-list li img{
-    opacity: 0;
-    width: 0;
+    /* opacity: 0; */
+    /* width: 0; */
 }
 .slider__meme-text-list li p{
     opacity: 0;
@@ -164,17 +164,31 @@ input#btn5:checked ~ .slider__footer label[for="btn5"].circle:hover
     height: 0;
 }
 
-input#btn1:checked ~ .slider__frame li:nth-child(1) img,
-input#btn2:checked ~ .slider__frame li:nth-child(2) img,
-input#btn3:checked ~ .slider__frame li:nth-child(3) img,
-input#btn4:checked ~ .slider__frame li:nth-child(4) img,
-input#btn5:checked ~ .slider__frame li:nth-child(5) img
-{
-    animation-name: fadeout;
-    animation-duration: 2s;
-    opacity: 1;
-    width: 100%;
+.slider__image-list{
+    transition: all 1s;
 }
+input#btn1:checked ~ .slider__frame .slider__image-list
+{
+    transform: translateX(0);
+}
+
+input#btn2:checked ~ .slider__frame .slider__image-list
+{
+    transform: translateX(-100%);
+}
+input#btn3:checked ~ .slider__frame .slider__image-list
+{
+    transform: translateX(-200%);
+}
+input#btn4:checked ~ .slider__frame .slider__image-list
+{
+    transform: translateX(-300%);
+}
+input#btn5:checked ~ .slider__frame .slider__image-list
+{
+    transform: translateX(-400%);
+}
+
 input#btn1:checked ~ .slider__footer li:nth-child(1) p,
 input#btn2:checked ~ .slider__footer li:nth-child(2) p,
 input#btn3:checked ~ .slider__footer li:nth-child(3) p,
@@ -190,14 +204,6 @@ input#btn5:checked ~ .slider__footer li:nth-child(5) p
 }
 
 
-@keyframes fadein {
-    0% {
-        width: 100%;
-    }
-    100% {
-        width: 0;
-    }
-}
 @keyframes fadeout {
     0% {
         opacity: 0;

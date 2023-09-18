@@ -18,8 +18,7 @@ body {
     aspect-ratio: var(--aspect-ratio);
 }
 
-.slider__frame,
-{
+.slider__frame{
     height: 100%;
 
     overflow: hidden;
@@ -207,6 +206,7 @@ input#btn5:checked ~ .slider__footer li:nth-child(5) p
         opacity: 1;
     }
 }
+
 
 input {
     display: none;

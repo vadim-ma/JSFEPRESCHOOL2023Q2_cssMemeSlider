@@ -1,0 +1,222 @@
+body {
+    font-size: 12px;
+}
+
+.slider {
+    padding: 0;
+    margin: 0 auto;
+
+    background-color: #26282A;
+    color: white;
+    max-width: 140vh;
+
+}
+
+.slider_container {
+    margin: 0 auto;
+    padding: 2%;
+    aspect-ratio: var(--aspect-ratio);
+}
+
+.slider__frame{
+    height: 100%;
+
+    overflow: hidden;
+    margin: 0 auto;
+}
+.footer__frame{
+    height: 100%;
+
+    overflow: hidden;
+    margin: 0 auto 0 0;
+}
+
+
+.slider__footer {
+    padding-top: 4em;
+}
+
+.slider__controls {
+    flex-shrink: 0;
+
+}
+
+.slider__image-list {
+
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.slider__image-list {
+    height: 100%;
+}
+
+.slider__footer {
+    display: flex;
+    gap: 1em;
+    align-items: self-start;
+    font-size: 1em;
+    padding: 1em 0 0 0;
+}
+
+.slider__meme-text {
+    margin: 0;
+    flex-grow: 1;
+    font-size: large;
+}
+.slider__meme-text{
+    display: inline-b;
+}
+.slider__controls {
+    flex-grow: 0;
+    height: 100%;
+    margin-top: -0.7em;
+}
+
+.slider__btn-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 0;
+}
+.slider__meme-text-list{
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    height: 100%;
+    object-fit: scale-down;
+
+}
+
+.button {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 3em;
+    aspect-ratio: 1;
+    padding: 0.7em;
+    border: none;
+    background-color: transparent;
+    line-height: inherit;
+
+}
+.button,
+label{
+
+    cursor: pointer;
+}
+
+.circle {
+    display: inline-block;
+    height: 90%;
+    aspect-ratio: 1;
+    background-color: steelblue;
+    border-radius: 50%;
+}
+
+.button:hover .circle {
+    background-color: white;
+
+}
+
+input#btn1:checked ~ .slider__footer label[for="btn1"].circle,
+input#btn2:checked ~ .slider__footer label[for="btn2"].circle,
+input#btn3:checked ~ .slider__footer label[for="btn3"].circle,
+input#btn4:checked ~ .slider__footer label[for="btn4"].circle,
+input#btn5:checked ~ .slider__footer label[for="btn5"].circle
+{
+    box-sizing: border-box;
+    background-color: transparent;
+    border: medium solid steelblue;
+}
+
+
+input#btn1:checked ~ .slider__footer label[for="btn1"].circle:hover,
+input#btn2:checked ~ .slider__footer label[for="btn2"].circle:hover,
+input#btn3:checked ~ .slider__footer label[for="btn3"].circle:hover,
+input#btn4:checked ~ .slider__footer label[for="btn4"].circle:hover,
+input#btn5:checked ~ .slider__footer label[for="btn5"].circle:hover
+{
+    border-color: white;
+
+}
+
+.slider__image-list li img{
+    /* opacity: 0; */
+    /* width: 0; */
+}
+.slider__meme-text-list li p{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider__image-list{
+    transition: all 1s;
+}
+input#btn1:checked ~ .slider__frame .slider__image-list
+{
+    transform: translateX(0);
+}
+
+input#btn2:checked ~ .slider__frame .slider__image-list
+{
+    transform: translateX(-100%);
+}
+input#btn3:checked ~ .slider__frame .slider__image-list
+{
+    transform: translateX(-200%);
+}
+input#btn4:checked ~ .slider__frame .slider__image-list
+{
+    transform: translateX(-300%);
+}
+input#btn5:checked ~ .slider__frame .slider__image-list
+{
+    transform: translateX(-400%);
+}
+
+input#btn1:checked ~ .slider__footer li:nth-child(1) p,
+input#btn2:checked ~ .slider__footer li:nth-child(2) p,
+input#btn3:checked ~ .slider__footer li:nth-child(3) p,
+input#btn4:checked ~ .slider__footer li:nth-child(4) p,
+input#btn5:checked ~ .slider__footer li:nth-child(5) p
+{
+    animation-name: fadeout;
+    animation-duration: 2s;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+@keyframes fadeout {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+input {
+    display: none;
+}
+
+
+

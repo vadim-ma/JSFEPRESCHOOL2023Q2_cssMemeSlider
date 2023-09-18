@@ -1,0 +1,17 @@
+@media screen and (max-width: 640px) {
+    .slider {
+        max-width: 120vh;
+    
+    }
+    
+    .slider__footer{
+        flex-direction: column-reverse;
+    }
+    .slider__controls{
+        align-self: center;
+        margin-top: 0;
+    }
+    .button{
+        margin-top: 0;
+    }
+}

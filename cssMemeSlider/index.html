@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme slider</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/vars.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media.css">
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slider_container">
+            <input type="radio" id="btn1" name="btn" checked>
+            <input type="radio" id="btn2" name="btn">
+            <input type="radio" id="btn3" name="btn">
+            <input type="radio" id="btn4" name="btn">
+            <input type="radio" id="btn5" name="btn">
+            <div class="slider__frame">
+                <ol class="slider__image-list">
+                    <li>
+                        <img src="images/shot.jpg" alt="shot" data-meme-text="I got a new task. It's a piece of cake.">
+                    </li>
+                    <li>
+                        <img src="images/trouble.jpg" alt="trouble"
+                            data-meme-text="How are you? I am working on the .... cssMemeSlider">
+                    </li>
+                    <li>
+                        <img src="images/screaming.jpg" alt="screaming" data-meme-text="I'll do it. Damn it.">
+                    </li>
+                    <li><img src="images/finally.jpg" alt="finally" data-meme-text="I've done it! Let's get drunk!">
+                    </li>
+                    <li><img src="images/reward.jpg" alt="reward"
+                            data-meme-text="Thank you to everyone who believed in me. I did not."></li>
+                </ol>
+            </div>
+
+            <div class="slider__footer">
+                <div class="footer__frame">
+                    <ol class="slider__meme-text-list">
+                        <li>
+                            <p class="slider__meme-text">I got a new task. It's a piece of cake.</p>
+                        </li>
+                        <li>
+                            <p class="slider__meme-text">How are you? I am working on the .... cssMemeSlider</p>
+                        </li>
+                        <li>
+                            <p class="slider__meme-text">I'll do it. Damn it.</p>
+                        </li>
+                        <li>
+                            <p class="slider__meme-text">I've done it! Let's get drunk!</p>
+                        </li>
+                        <li>
+                            <p class="slider__meme-text">Thank you to everyone who believed in me. I did not.</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="slider__controls">
+                    <ul class="slider__btn-list">
+                        <li>
+                            <div class="button">
+                                <label for="btn1" class="circle"></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="button">
+                                <label for="btn2" class="circle"></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="button">
+                                <label for="btn3" class="circle"></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="button">
+                                <label for="btn4" class="circle"></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="button">
+                                <label for="btn5" class="circle"></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
